@@ -155,5 +155,6 @@ int main() {
         }
     } while (command != "exit");
 
+    delete sony;
     return 0;
 }
