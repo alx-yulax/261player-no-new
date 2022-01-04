@@ -23,7 +23,6 @@ public:
     }
 
     void show() {
-
         std::cout << " title: " << title << "  Released: " << std::put_time(&released, "%d/%m/%Y")
                   << "  Duration (sec): " << duration_sec << std::endl;
     }
@@ -40,19 +39,15 @@ class Player {
     int track_number;
     int track_start;
     std::time_t track_time_left;
-    //Track **available_records;
     std::vector<Track> available_records_v;
-
 
 public:
     Player() : status(STOPPED), track_number(-1) {
-        //available_records = new Track *[5];
 
         std::tm released{};
         released.tm_year = 119;
         released.tm_mon = 5;
         released.tm_mday = 1;
-
 
         available_records_v.push_back(Track("Just Like a Pill", released, 244));
         available_records_v.push_back(Track("Who Knew", released, 212));
@@ -60,12 +55,6 @@ public:
         available_records_v.push_back(Track("Just Give Me a Reason", released, 278));
         available_records_v.push_back(Track("Walk Me Home", released, 177));
 
-    }
-
-    ~Player() {
-        for (int i = 0; i < available_records_v.size(); ++i) {
-            //delete available_records[i];
-        }
     }
 
     void update_status_PLAYING() {
