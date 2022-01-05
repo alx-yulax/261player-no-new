@@ -1,7 +1,6 @@
-cmake_minimum_required(VERSION 3.20)
-project(untitled28)
+cmake_minimum_required(VERSION 3.21)
+project(261player_no_new)
 
 set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_EXE_LINKER_FLAGS "-static -static-libgcc")
 
-add_executable(untitled28 main.cpp)
+add_executable(261player_no_new main.cpp)
